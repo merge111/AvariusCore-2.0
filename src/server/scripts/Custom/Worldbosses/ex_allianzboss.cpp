@@ -4,6 +4,7 @@
 #include "ScriptedGossip.h"
 #include "SpellAuras.h"
 #include "Player.h"
+#include "World.h"
 
 enum eNums
 {

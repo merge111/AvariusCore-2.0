@@ -4,14 +4,16 @@
 #include "ScriptMgr.h"
 #include "ScriptedCreature.h"
 #include "Player.h"
-
-
-
+#include "GossipDef.h"
+#include "ScriptedGossip.h"
+#include "WorldSession.h"
 
 class dark : public CreatureScript
 {
 public: dark() : CreatureScript("dark"){ }
 
+     CreatureAI* GetAI(Creature* /*creature*/) const { }
+    
 		bool OnGossipHello(Player *pPlayer, Creature* _creature)
 		{
             Group* group = pPlayer->GetGroup();

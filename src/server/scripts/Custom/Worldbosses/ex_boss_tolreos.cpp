@@ -33,6 +33,7 @@
 #include <sstream>
 #include <string>
 #include <stdlib.h>
+#include "World.h"
 
 enum Spells
 {
@@ -192,15 +193,15 @@ public:
 					_events.ScheduleEvent(EVENT_CURRUPTION, 10000);
 					break;
 				case EVENT_ENRAGE:
-					DoCastToAllHostilePlayers(SPELL_ENRAGE);
+					DoCast(SPELL_ENRAGE);
 					break;
 				case EVENT_CRIPPLE:
 					Talk(SAY_RANDOM);
-					DoCastToAllHostilePlayers(SPELL_CRIPPLE);
+					DoCast(SPELL_CRIPPLE);
 					_events.ScheduleEvent(EVENT_CRIPPLE, 25000);
 					break;
 				case EVENT_ARCANE_BARRAGE:
-					DoCastToAllHostilePlayers(SPELL_ARCANE_BARRAGE);
+					DoCast(SPELL_ARCANE_BARRAGE);
 					_events.ScheduleEvent(EVENT_ARCANE_BARRAGE, 5000);
 					break;
 				case EVENT_SUMMONS:
@@ -210,19 +211,19 @@ public:
 					break;
 				case EVENT_EARTH:
 					Talk(SAY_ENRAGE);
-					if (Unit* target = SelectTarget(SELECT_TARGET_TOPAGGRO, 0)){
+					if (Unit* target = SelectTarget(SELECT_TARGET_MAXTHREAT, 0)){
 						DoCast(target, SPELL_EARTH);
 					}
 					_events.ScheduleEvent(EVENT_EARTH, 10000);
 					break;
 				case EVENT_PSYCHOSIS:
-					if (Unit* target = SelectTarget(SELECT_TARGET_BOTTOMAGGRO,0)){
+					if (Unit* target = SelectTarget(SELECT_TARGET_MINTHREAT,0)){
 						DoCast(target, SPELL_PSYCHOSIS);
 					}	
 					_events.ScheduleEvent(EVENT_PSYCHOSIS, 18000);
 					break;
 				case EVENT_HEX:
-					if (Unit* target = SelectTarget(SELECT_TARGET_FARTHEST, 0)){
+					if (Unit* target = SelectTarget(SELECT_TARGET_MAXDISTANCE, 0)){
 						DoCast(target,SPELL_HEX);
 					}
 					_events.ScheduleEvent(EVENT_HEX, 10000);
@@ -233,7 +234,7 @@ public:
 					break;
 				case EVENT_ARMY_OF_DEAD:
 					me->Yell("Kommt mir zur Hilfe!", LANG_UNIVERSAL, nullptr);
-					DoCastToAllHostilePlayers(SPELL_ARMY_OF_DEAD);
+					DoCast(SPELL_ARMY_OF_DEAD);
 					_events.ScheduleEvent(EVENT_ARMY_OF_DEAD, 20000);
 					break;
 

@@ -28,6 +28,7 @@
 #include "WorldSession.h"
 #include <sstream>
 #include <string>
+#include "ScriptedGossip.h"
 #include <stdlib.h>
 #include <Custom/Logic/CustomPlayerLog.h>
 #include <Custom/Logic/CustomCharacterSystem.h>
@@ -52,7 +53,9 @@ class vipvendor : public CreatureScript
 {
 public: vipvendor() : CreatureScript("vipvendor") { }
 
+    CreatureAI* GetAI(Creature* /*creature*/) const { }
 
+    
 		bool OnGossipHello(Player *player, Creature* creature)
 		{
 			if (creature->IsQuestGiver())

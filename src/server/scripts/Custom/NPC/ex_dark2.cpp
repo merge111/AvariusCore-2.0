@@ -4,14 +4,16 @@
 #include "ScriptMgr.h"
 #include "ScriptedCreature.h"
 #include "Player.h"
-
-
-
+#include "GossipDef.h"
+#include "ScriptedGossip.h"
+#include "WorldSession.h"
 
 class dark2 : public CreatureScript
 {
 public: dark2() : CreatureScript("dark2"){ }
 
+     CreatureAI* GetAI(Creature* /*creature*/) const { }
+    
 		bool OnGossipHello(Player *pPlayer, Creature* _creature)
 		{
 			pPlayer->PlayerTalkClass->GetGossipMenu().AddMenuItem(-1,7, "Ich fordere euren Bruder heraus!", GOSSIP_SENDER_MAIN, 0, "", 0, false);

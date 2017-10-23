@@ -4,11 +4,7 @@
 #include "Custom/Logic/CustomGMLogic.h"
 #include <Custom/Logic/CustomWorldSystem.h>
 #include "WorldSession.h"
-#include "QueryResult.h"
-#include "ObjectMgr.h"
-#include "Common.h"
-#include "Formulas.h"
-#include "ScriptPCH.h"
+#include "DatabaseEnv.h"
 
 int CustomQuestionAnswerSystem::generateRandomInt(int min, int max)
 {

@@ -2,6 +2,7 @@
 #include "ScriptMgr.h"
 #include "ScriptedCreature.h"
 #include "Player.h"
+#include "World.h"
 
 enum Spells
 {
@@ -217,7 +218,7 @@ public:
 					_events.ScheduleEvent(EVENT_MANGLING_SLASH, 10000);
 					break;
 				case EVENT_PIERCING_SLASH:
-					DoCastToAllHostilePlayers(SPELL_PIERCING_SLASH);
+					DoCast(SPELL_PIERCING_SLASH);
 					_events.ScheduleEvent(EVENT_PIERCING_SLASH, 15000);
 					break;
 				case EVENT_BLOOD_MIRROR_DAMAGE:
@@ -225,11 +226,11 @@ public:
 					_events.ScheduleEvent(EVENT_BLOOD_MIRROR_DAMAGE, 18000);
 					break;
 				case EVENT_ANNOYING_YIPPING:
-					DoCastToAllHostilePlayers(SPELL_ANNOYING_YIPPING);
+					DoCast(SPELL_ANNOYING_YIPPING);
 					_events.ScheduleEvent(EVENT_ANNOYING_YIPPING, 25000);
 					break;
 				case EVENT_SARGERAS:
-					DoCastToAllHostilePlayers(SPELL_SARGERAS);
+					DoCast(SPELL_SARGERAS);
 					_events.ScheduleEvent(EVENT_SARGERAS, 5000);
 					break;
 				case EVENT_BURN:

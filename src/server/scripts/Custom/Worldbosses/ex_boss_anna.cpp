@@ -1,5 +1,6 @@
 #include "ScriptMgr.h"
 #include "ScriptedCreature.h"
+#include "World.h"
 
 enum Spells{
 	SPELL_HEX = 66054,							// FLUCH
@@ -161,7 +162,7 @@ public:
 					break;
 
 				case EVENT_SCHATTENWORT_SCHMERZ:
-					DoCastToAllHostilePlayers(SPELL_SCHATTENWORT_SCHMERZ);
+					DoCast(SPELL_SCHATTENWORT_SCHMERZ);
 					_events.ScheduleEvent(EVENT_SCHATTENWORT_SCHMERZ, 20000);
 					break;
 

@@ -31,6 +31,8 @@
 #include <Custom/Logic/CustomCharacterSystem.h>
 #include <Custom/Logic/CustomPlayerLog.h>
 #include <Custom/Logic/CustomTranslationSystem.h>
+#include "GossipDef.h"
+#include "ScriptedGossip.h"
 
 #define GROUPID 4
 
@@ -70,6 +72,7 @@ class automatic : public CreatureScript
 public:
 	automatic() : CreatureScript("automatic") { }
 
+    CreatureAI* GetAI(Creature* /*creature*/) const { }
 
 	bool OnGossipHello(Player* player, Creature* creature)
 	{

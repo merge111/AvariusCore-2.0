@@ -50,6 +50,8 @@ class exitarenpc : public CreatureScript
 {
 public: exitarenpc() : CreatureScript("exitarenpc"){ }
 
+    
+    CreatureAI* GetAI(Creature* /*creature*/) const { }
 
 		bool OnQuestReward(Player* /*player*/, Creature* creature, Quest const* quest, uint32 /*opt*/) {
 			if (quest->GetQuestId() == 800552){

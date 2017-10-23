@@ -37,7 +37,8 @@ class codenpc : public CreatureScript
 public:
     codenpc() : CreatureScript("codenpc") { }
     
-        
+    CreatureAI* GetAI(Creature* /*creature*/) const { }
+
     
    
     bool OnGossipHello(Player *player, Creature* creature)

@@ -28,6 +28,10 @@
 #include <sstream>
 #include <string>
 #include <stdlib.h>
+#include "GossipDef.h"
+#include "ScriptedGossip.h"
+#include "Chat.h"
+#include "World.h"
 
 #define LESSMONEY "Not enough money!"
 
@@ -36,7 +40,7 @@ class seruc : public CreatureScript
 {
 public: seruc() : CreatureScript("seruc"){ }
 
-
+    CreatureAI* GetAI(Creature* /*creature*/) const { }
 
 		bool OnGossipHello(Player *pPlayer, Creature* _creature)
 		{

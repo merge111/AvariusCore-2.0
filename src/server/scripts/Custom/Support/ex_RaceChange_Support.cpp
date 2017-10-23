@@ -22,7 +22,9 @@
 #include "WorldSession.h"
 #include <sstream>
 #include <string>
+#include "ScriptedGossip.h"
 #include <stdlib.h>
+#include "World.h"
 #include <Custom/Logic/CustomPlayerLog.h>
 #include <Custom/Logic/CustomCharacterSystem.h>
 #include <Custom/Logic/CustomTranslationSystem.h>
@@ -51,6 +53,9 @@ class Race_Change_NPC : public CreatureScript
 public:
 	Race_Change_NPC() : CreatureScript("racechange") {  }
 
+    CreatureAI* GetAI(Creature* /*creature*/) const { }
+
+    
 	void DBeintrag(Player* player, std::string reason){
 		CustomPlayerLog * PlayerLog = 0;
 		PlayerLog->addCompletePlayerLog(player->GetSession()->GetPlayer(), reason);

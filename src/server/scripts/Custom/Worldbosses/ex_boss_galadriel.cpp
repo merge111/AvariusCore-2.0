@@ -2,6 +2,7 @@
 #include "ScriptMgr.h"
 #include "ScriptedCreature.h"
 #include "Player.h"
+#include "World.h"
 
 enum Spells
 {
@@ -152,7 +153,7 @@ public:
 					_events.ScheduleEvent(EVENT_ENRAGE, 10000);
 					break;
 				case EVENT_WASTE:
-					DoCastToAllHostilePlayers(SPELL_TOXIC_WASTE);
+					DoCast(SPELL_TOXIC_WASTE);
 					_events.ScheduleEvent(EVENT_WASTE, 15000);
 					break;
 				

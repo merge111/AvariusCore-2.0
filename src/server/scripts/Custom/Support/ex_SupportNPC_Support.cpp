@@ -21,6 +21,8 @@
 #include <string>
 #include "ScriptedCreature.h"
 #include "Player.h"
+#include "Chat.h"
+#include "ScriptedGossip.h"
 
 
 
@@ -29,7 +31,8 @@ class supportnpc : public CreatureScript
 public:
 		supportnpc() : CreatureScript("supportnpc") { }
 		
-	
+        CreatureAI* GetAI(Creature* /*creature*/) const { }
+
 
 		void erklaerung(Player* player, std::string hilfe){
         

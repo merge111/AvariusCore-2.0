@@ -30,6 +30,7 @@
 #include <string>
 #include <stdlib.h>
 #include <Custom/Logic/CustomCharacterSystem.h>
+#include "ScriptedGossip.h"
 
 enum Events {
 	HALLOWEENEVENT = 99,

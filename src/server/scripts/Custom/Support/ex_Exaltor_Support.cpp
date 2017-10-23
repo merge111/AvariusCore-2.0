@@ -25,6 +25,7 @@
 #include <stdlib.h>
 #include "ObjectGuid.h"
 #include "ObjectMgr.h"
+#include "ScriptedGossip.h"
 #include <Custom/Logic/CustomCharacterSystem.h>
 #include <Custom/Logic/CustomPlayerLog.h>
 #include <Custom/Logic/CustomCouponSystem.h>

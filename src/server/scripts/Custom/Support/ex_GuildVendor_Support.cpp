@@ -23,7 +23,7 @@
 #include <sstream>
 #include <string>
 #include <stdlib.h>
-
+#include "ScriptedGossip.h"
 
 
 
@@ -31,7 +31,9 @@ class gildenvendor : public CreatureScript
 {
 public: gildenvendor() : CreatureScript("gildenvendor"){ }
 
+    CreatureAI* GetAI(Creature* /*creature*/) const { }
 
+    
 		void gildenhausfrei(Player* player, uint32 id){
 			QueryResult result;
 			result = CharacterDatabase.PQuery("SELECT guildid FROM `guildhouses` WHERE `id` = %u", id);

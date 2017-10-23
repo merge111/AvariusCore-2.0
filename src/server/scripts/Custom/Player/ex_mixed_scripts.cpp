@@ -30,6 +30,7 @@
 #include "ArenaTeam.h"
 #include "ArenaScore.h"
 #include "ArenaTeamMgr.h"
+#include "World.h"
 #include <vector>
 #include <Custom/Logic/CustomGMLogic.h>
 #include <Custom/Logic/CustomCharacterSystem.h>

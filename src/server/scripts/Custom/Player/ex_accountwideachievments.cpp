@@ -1,4 +1,8 @@
 #include "Config.h"
+#include "WorldSession.h"
+#include "DatabaseEnv.h"
+#include "AchievementMgr.h"
+
 
 class AccountAchievements : public PlayerScript
 {

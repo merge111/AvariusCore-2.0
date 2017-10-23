@@ -53,6 +53,7 @@ their bags are full.
 #include <stdlib.h>
 #include "ObjectGuid.h"
 #include "ObjectMgr.h"
+#include "World.h"
 
 
 class custom_CongratsOnLevel : public PlayerScript
