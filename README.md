@@ -65,6 +65,7 @@ Read file [THANKS](THANKS).
 
 ## Links
 
-* [Website](https://www.trinitycore.org)
-* [Wiki](https://www.trinitycore.info)
+* [TrinityCore](https://www.trinitycore.org)
+* [TC Wiki](https://www.trinitycore.info)
 * [Forums](https://community.trinitycore.org)
+* [AvariusCore Website] (avarius.net)
