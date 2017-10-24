@@ -36,7 +36,7 @@ PreparedQueryResult CustomCharacterSystem::getAccountbyID(int accountid)
 }
 
 
-
+//Insert a new DB Entry for a successfull granted Firstcharacter
 void CustomCharacterSystem::insertNewFirstCharacterforPlayerCount(int guid, std::string charactername, int accountid, std::string accountname, int guildid, std::string ip)
 {
 	//PrepareStatement(CHAR_INS_PLAYER_FIRST_CHARACTER_COUNT, "INSERT INTO player_first_character_count (guid,charname, account, accname, time, guildid,ip) VALUES (?,?,?,?,UNIX_TIMESTAMP(),?,?)", CONNECTION_ASYNC);
@@ -52,7 +52,7 @@ void CustomCharacterSystem::insertNewFirstCharacterforPlayerCount(int guid, std:
 	CharacterDatabase.CommitTransaction(trans);
 }
 
-
+//Returns the Playerlog for a specific Playeraccount.
 PreparedQueryResult CustomCharacterSystem::getFirstCharacterPlayerLog(int accountid)
 {
 	PreparedStatement * stmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_FIRST_CHAR_PLAYERLOG);
@@ -90,6 +90,7 @@ bool CustomCharacterSystem::hasPlayerAlreadyAFirstChar(int accountid,std::string
 	return true;
 }
 
+//Check if Player has <2 Firstcharacters
 bool CustomCharacterSystem::countIfPlayerHasLessTotalOf2FirstCharacters(int accountid)
 {
 	PreparedStatement * stmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_PLAYER_FIRST_CHARACTER_COUNT);

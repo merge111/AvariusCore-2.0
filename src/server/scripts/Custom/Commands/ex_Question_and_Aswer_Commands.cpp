@@ -33,9 +33,7 @@
 #include <random>
 #include <algorithm>
 
-#include "ScriptMgr.h"
 #include "ObjectMgr.h"
-#include "Chat.h"
 #include "SocialMgr.h"
 #include <Custom/Logic/CustomCouponSystem.h>
 #include <Custom/Logic/CustomCharacterSystem.h>
