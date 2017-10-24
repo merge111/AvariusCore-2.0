@@ -40,11 +40,7 @@
 #include <sstream>
 #include <string>
 #include <stdlib.h>
-#include "Chat.h"
-#include "ObjectMgr.h"
-#include "Player.h"
 #include "ReputationMgr.h"
-#include "ScriptMgr.h"
 #include "DatabaseEnv.h"
 #include <Custom/Logic/CustomCharacterSystem.h>
 #include <Custom/Logic/CustomReportSystem.h>
@@ -53,13 +49,13 @@
 #include <Custom/Logic/CustomPlayerLog.h>
 
 
-#define REPORT_QUEST_SUCESS "Quest report sucessfull."
+#define REPORT_QUEST_SUCESS "Quest reported sucessfully."
 #define REPORT_QUEST_SUCESS_AND_COMPLETE "Quest reported and completed."
 #define REPORT_QUEST_ERROR  "You already reported this quest!"
-#define CHECK_QUEST_ERROR "Quest was not found in DB!"
+#define CHECK_QUEST_ERROR "Quest not found in DB!"
 #define REPORT_ACTIVATE "Quest sucessfully activated!"
-#define REPORT_DEACTIVATE "Quest sucessfully deactivate!"
-#define REPORT_NO_VALID_QUEST "Without entering a valid Questerrormessage, the command cannot be executed!"
+#define REPORT_DEACTIVATE "Quest sucessfully deactivated!"
+#define REPORT_NO_VALID_QUEST "Without entering a valid Errormsg, the command cannot be executed!"
 
 class ex_reportcommands : public CommandScript
 {
@@ -71,7 +67,7 @@ public:
 		static std::vector<ChatCommand> bugTable =
 		{
 			{ "quest", SEC_ADMINISTRATOR, false, &HandleReportQuestCommand, "" },
-			{ "activate", SEC_ADMINISTRATOR, false, &HandleActivateQuestCommand, "" },
+			{ "activate", SEC_CONSOLE, false, &HandleActivateQuestCommand, "" },
 			{ "deactivate", SEC_ADMINISTRATOR, false, &HandleDeactivateCommand, "" }
 
 		};

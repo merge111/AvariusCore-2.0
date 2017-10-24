@@ -56,8 +56,7 @@ public:
 
 		static std::vector<ChatCommand> commandTable =
 		{
-			//{ "goname",         SEC_MODERATOR,      false, OldHandler<&ChatHandler::HandleAppearCommand>,              "" },				
-			//{ "namego",         SEC_MODERATOR,      false, OldHandler<&ChatHandler::HandleSummonCommand>,              "" },				
+			
 			//Allows your players to gamble for fun and prizes
 			//{ "gamble", SEC_PLAYER, false, &HandleGambleCommand, "" },
 			//{ "roulette", SEC_PLAYER, false, &HandleRouletteCommand, "" },
@@ -447,7 +446,7 @@ public:
 
 		else {
 			std::ostringstream uu;
-			uu << "Keinen Eintrag des Spielers " << eingabe << " vorhanden.";
+			uu << "Kein Eintrag des Spielers " << eingabe << " vorhanden.";
 			sWorld->SendGMText(LANG_GM_BROADCAST, uu.str().c_str());
 			return true;
 		}

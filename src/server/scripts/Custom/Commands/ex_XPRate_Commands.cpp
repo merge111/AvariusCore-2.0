@@ -14,7 +14,7 @@ public:
 
 		static std::vector<ChatCommand> commandTable =
 		{
-			{ "xprate", SEC_ADMINISTRATOR , false, &HandleXPRate, "" },
+			{ "xprate", SEC_PLAYER , false, &HandleXPRate, "" },
 
 		};
 
